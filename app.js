@@ -17,14 +17,36 @@ app.get('/api', (req, res) => {
 
 app.get('/Popular', async (req, res) => {
     const result = await scapper.popular()
-    res.json(result)
+    res.header("Content-Type", 'application/json');
+    res.send(JSON.stringify(result, null, 4))
 })
 
 app.get('/NewSeasons', async (req, res) => {
     const result = await scapper.newSeason()
-    res.json(result)
+    res.header("Content-Type", 'application/json');
+    res.send(JSON.stringify(result, null, 4))
 })
 
+app.get('/search/:query', async (req, res) => {
+
+    const result = await scapper.search(req.params.query)
+    res.header("Content-Type", 'application/json');
+    res.send(JSON.stringify(result, null, 4))
+})
+
+app.get('/getAnime/:query', async (req, res) => {
+
+    const result = await scapper.anime(req.params.query)
+    res.header("Content-Type", 'application/json');
+    res.send(JSON.stringify(result, null, 4))
+})
+
+app.get('/getEpisode/:query', async (req, res) => {
+
+    const result = await scapper.watchAnime(req.params.query)
+    res.header("Content-Type", 'application/json');
+    res.send(JSON.stringify(result, null, 4))
+})
 
 port = env.PORT || 3000
 app.listen(port, () => {
