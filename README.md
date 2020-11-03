@@ -34,19 +34,18 @@ Listening to port 3000
 http://127.0.0.1:3000/Popular
 ```
 
-<br />
 **GET New Seasons**
 ```
 http://127.0.0.1:3000/NewSeasons
 ```
 
-<br />
+
 **GET Anime**
 ```
 http://127.0.0.1:3000/getAnime/"anime_id"
 ```
 
-<br />
+
 **GET Anime Episode**
 ```
 http://127.0.0.1:3000/getEpisode/"episode_id"
