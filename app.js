@@ -1,4 +1,4 @@
-const scapper = require('./scapper')
+const scapper = require('./scrapper')
 const express = require('express')
 const { env } = require('process')
 const cors = require('cors')
