@@ -36,7 +36,7 @@ http://127.0.0.1:3000/Popular
  >this will return all the popular anime
 ```
 [
-	{
+    {
         "name": "anime name",
         "img_url": "url",
         "anime_id": "anime id"
