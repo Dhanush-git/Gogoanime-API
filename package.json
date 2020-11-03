@@ -1,0 +1,32 @@
+{
+  "name": "gogoanime-scapper",
+  "version": "1.0.0",
+  "description": "simple gogoanime scapper",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Dhanush-git/gogoanime-API.git"
+  },
+  "keywords": [
+    "gogoanime-api",
+    "gogoanime",
+    "scrapper",
+    "gogoanime",
+    "api"
+  ],
+  "author": "Dhanush Suvarna",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Dhanush-git/gogoanime-API/issues"
+  },
+  "homepage": "https://github.com/Dhanush-git/gogoanime-API#readme",
+  "dependencies": {
+    "axios": "^0.21.0",
+    "cheerio": "^1.0.0-rc.3",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

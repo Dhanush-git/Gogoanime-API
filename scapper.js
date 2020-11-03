@@ -1,8 +1,7 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
-const { default: Axios } = require('axios');
-const { start } = require('repl');
-const { url } = require('inspector');
+
+
 
 
 async function newSeason(page) {
@@ -17,8 +16,8 @@ async function newSeason(page) {
         $elements = $(element)
         name = $elements.find('p').find('a')
         img = $elements.find('div').find('a').find('img').attr('src')
-        link = "https://gogoanime.so/" + $elements.find('div').find('a').attr('href')
-        anime_name = { 'name': name.html(), 'img_url': img, 'anime_link': link }
+        link = $elements.find('div').find('a').attr('href')
+        anime_name = { 'name': name.html(), 'img_url': img, 'anime_link': link.slice(10,) }
         anime_list.push(anime_name)
 
     })
@@ -39,8 +38,8 @@ async function popular(page) {
         $elements = $(element)
         name = $elements.find('p').find('a')
         img = $elements.find('div').find('a').find('img').attr('src')
-        link = "https://gogoanime.so/" + $elements.find('div').find('a').attr('href')
-        anime_name = { 'name': name.html(), 'img_url': img, 'anime_link': link }
+        link = $elements.find('div').find('a').attr('href')
+        anime_name = { 'name': name.html(), 'img_url': img, 'anime_id': link.slice(10,) }
         anime_list.push(anime_name)
 
     })
@@ -60,8 +59,8 @@ async function search(query) {
         $elements = $(element)
         name = $elements.find('p').find('a')
         img = $elements.find('div').find('a').find('img').attr('src')
-        link = "https://gogoanime.so/" + $elements.find('div').find('a').attr('href')
-        anime_name = { 'name': name.html(), 'img_url': img, 'anime_link': link }
+        link = $elements.find('div').find('a').attr('href')
+        anime_name = { 'name': name.html(), 'img_url': img, 'anime_id': link.slice(10,) }
         anime_list.push(anime_name)
 
     })
@@ -87,6 +86,10 @@ async function anime(_anime_name) {
     ep_start = $('#episode_page > li > a').attr('ep_start')
     ep_end = $('#episode_page > li > a').attr('ep_end')
 
+    if (ep_start == '0') {
+        ep_start = 1
+    }
+
     for (let i = ep_start; i <= ep_end; i++) {
         episode_array.push(`${_anime_name}-episode-${i}`)
 
@@ -94,7 +97,7 @@ async function anime(_anime_name) {
 
 
 
-    anime_result = { 'name': anime_name, 'img_url': img_url, 'about': anime_about, 'episodes': episode_array }
+    anime_result = { 'name': anime_name, 'img_url': img_url, 'about': anime_about, 'episode_id': episode_array }
 
     return await (anime_result)
 
@@ -129,7 +132,7 @@ async function getDownloadLink(episode_link) {
         ep_name = $(element).find('a').html()
         ep_link = $(element).find('a').attr('href')
 
-        ep_dic = { 'name': ep_name.replace('Download\n', 'watch').replace(/ +/g, ""), 'ep_link': ep_link }
+        ep_dic = { 'quality': ep_name.replace('Download\n', 'watch').replace(/ +/g, ""), 'ep_link': ep_link }
 
         ep_array.push(ep_dic)
     })
