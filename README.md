@@ -27,7 +27,7 @@ Listening to port 3000
 
 # API Documentation
 
-*Running on localhost
+*Running on localhost*
 
 **GET Popular Anime**
 ```
@@ -40,3 +40,14 @@ http://127.0.0.1:3000/Popular
 http://127.0.0.1:3000/NewSeasons
 ```
 
+<br />
+**GET Anime**
+```
+http://127.0.0.1:3000/getAnime/"anime_id"
+```
+
+<br />
+**GET Anime Episode**
+```
+http://127.0.0.1:3000/getEpisode/"episode_id"
+```
