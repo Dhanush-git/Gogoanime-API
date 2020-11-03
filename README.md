@@ -1,4 +1,4 @@
-# Gogoanime-API
+# Gogoanime-API 🧬
 This is a personal project that I am working on 🧰
 it is a simple api for scrapping 🔪 gogoanime.so 
 
@@ -29,25 +29,70 @@ Listening to port 3000
 
 *Running on localhost*
 
-**GET Popular Anime 🍿**
+**GET | Popular Anime 🍿**
 ```
 http://127.0.0.1:3000/Popular
 ```
-this will return all the anime on the popular with >name >img_url >anime_id
+ >this will return all the popular anime
+```
+[
+	{
+        "name": "anime name",
+        "img_url": "url",
+        "anime_id": "anime id"
+    }
+    ...
+]
+```
 
-**GET New Seasons 🆕**
+**GET | New Seasons 🆕**
 ```
 http://127.0.0.1:3000/NewSeasons
 ```
-
-
-**GET Anime 🕵️‍♂️**
+ >this will return all anime with new seasons available
 ```
-http://127.0.0.1:3000/getAnime/"anime_id"
+[
+	{
+        "name": "anime name",
+        "img_url": "url",
+        "anime_id": "anime id"
+    }
+    ...
+]
 ```
-
-
-**GET Anime Episode 📽**
+**GET | Anime 🕵️‍♂️**
 ```
-http://127.0.0.1:3000/getEpisode/"episode_id"
+http://127.0.0.1:3000/getAnime/:anime_id
+```
+ >this will return the anime **name** , **thumbnail image** ,**about  ?** and **episode_id** for all the episodes available for that anime
+```
+[
+	{
+	    "name": "anime name",
+	    "img_url": "url",
+	    "about": "Plot Summary: about the anime",
+	    "episode_id": 
+			[
+		        "some-anime-episode-1",
+		        "some-anime-episode-2",
+		        "some-anime-episode-3"
+		         ...
+		    ]
+	}
+]
+```
+**GET  | Anime Episode 📽**
+```
+http://127.0.0.1:3000/getEpisode/:episode_id
+```
+ >this will return the downloadable  🔻 link for the episode
+```
+[
+	    {
+	        "quality": "watch(360P-mp4)",
+	        "ep_link": "episode url"
+	    }
+	    
+	    ...
+]
 ```
