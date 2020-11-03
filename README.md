@@ -105,4 +105,4 @@ Please ⭐ this repository if you like it or this project helped you!
 Feel free to open issues or submit pull-requests to help me improving my work.
 
 **🤖 Author**
-Chris Michael
+Dhanush
