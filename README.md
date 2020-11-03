@@ -29,24 +29,25 @@ Listening to port 3000
 
 *Running on localhost*
 
-**GET Popular Anime**
+**GET Popular Anime 🍿**
 ```
 http://127.0.0.1:3000/Popular
 ```
+this will return all the anime on the popular with >name >img_url >anime_id
 
-**GET New Seasons**
+**GET New Seasons 🆕**
 ```
 http://127.0.0.1:3000/NewSeasons
 ```
 
 
-**GET Anime**
+**GET Anime 🕵️‍♂️**
 ```
 http://127.0.0.1:3000/getAnime/"anime_id"
 ```
 
 
-**GET Anime Episode**
+**GET Anime Episode 📽**
 ```
 http://127.0.0.1:3000/getEpisode/"episode_id"
 ```
