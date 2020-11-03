@@ -72,7 +72,7 @@ http://127.0.0.1:3000/getAnime/:anime_id
 	    "img_url": "url",
 	    "about": "Plot Summary: about the anime",
 	    "episode_id": 
-			[
+		    [
 		        "some-anime-episode-1",
 		        "some-anime-episode-2",
 		        "some-anime-episode-3"
