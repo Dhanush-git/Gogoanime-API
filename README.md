@@ -12,8 +12,9 @@ this should install all the dependencies required for running this project
 
 <br />
 🔢 step 2
-```sh
-node app.js
+
+```
+npm app.js
 ```
 Now you might get a output similar to this
 
