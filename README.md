@@ -25,7 +25,7 @@ Listening to port 3000
 🥳 Yay, our API server is running 🏃‍♂️💨
 
 
-# API Documentation
+# API Documentation 📑
 
 *Running on localhost*
 
