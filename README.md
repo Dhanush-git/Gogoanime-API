@@ -16,6 +16,7 @@ this should install all the dependencies required for running this project
 node app.js
 ```
 Now you might get a output similar to this
+
 ```
 Listening to port 3000
 ```
