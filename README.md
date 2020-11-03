@@ -9,7 +9,7 @@ it is a simple api for scrapping 🔪 gogoanime.so
 ```
 npm install
 ```
-this should install all the dependencies required for running this project
+this should install 🔻 all the dependencies required for running this project 📂
 
 <br />
 🔢 step 2
@@ -26,4 +26,17 @@ Listening to port 3000
 
 
 # API Documentation
-pending..
+
+*Running on localhost
+
+**GET Popular Anime**
+```
+http://127.0.0.1:3000/Popular
+```
+
+<br />
+**GET New Seasons**
+```
+http://127.0.0.1:3000/NewSeasons
+```
+
