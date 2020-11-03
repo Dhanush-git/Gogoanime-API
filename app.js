@@ -7,13 +7,8 @@ const app = express()
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send('👋 Hello world🌍, Use /api for API Documentation ')
+    res.send('👋 Hello world🌍, Welcome to 🦄 GogoAnime API 🧬')
 })
-
-app.get('/api', (req, res) => {
-    res.send("👋 Welcome to 🦄 GogoAnime API 🧬")
-})
-
 
 app.get('/Popular', async (req, res) => {
     const result = await scapper.popular()
