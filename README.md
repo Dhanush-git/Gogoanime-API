@@ -24,6 +24,13 @@ Listening to port 3000
 ```
 🥳 Yay, our API server is running 🏃‍♂️💨
 
+Now visit
+```
+http://127.0.0.1:3000/
+```
+and you should be greeted with
+<br />
+**👋 Hello world🌍, Welcome to 🦄 GogoAnime API 🧬**
 
 # API Documentation 📑
 
