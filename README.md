@@ -52,7 +52,7 @@ http://127.0.0.1:3000/NewSeasons
  >this will return all anime with new seasons available
 ```
 [
-	{
+    {
         "name": "anime name",
         "img_url": "url",
         "anime_id": "anime id"
