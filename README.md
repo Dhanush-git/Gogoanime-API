@@ -5,6 +5,8 @@ it is a simple api for scrapping 🔪 gogoanime.so
 **How to use the API ?**
 <br />
 
+**Firstly download the zip or clone the repo**
+
 🔢 step 1
 ```
 npm install
