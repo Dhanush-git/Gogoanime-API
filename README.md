@@ -5,16 +5,19 @@ it is a simple api for scrapping 🔪 gogoanime.so
 **How to use the API ?**
 <br />
 
-**Firstly download the zip or clone the repo**
-
 🔢 step 1
+```
+Download the repo 🟢
+```
+
+🔢 step 2
 ```
 npm install
 ```
 this should install 🔻 all the dependencies required for running this project 📂
 
 <br />
-🔢 step 2
+🔢 step 3
 
 ```
 npm app.js
@@ -26,13 +29,15 @@ Listening to port 3000
 ```
 🥳 Yay, our API server is running 🏃‍♂️💨
 
-Now visit
+🔢 step 4 : Now visit
 ```
 http://127.0.0.1:3000/
 ```
 and you should be greeted with
-<br />
-**👋 Hello world🌍, Welcome to 🦄 GogoAnime API 🧬**
+```
+👋 Hello world🌍, Welcome to 🦄 GogoAnime API 🧬
+```
+
 
 # API Documentation 📑
 
