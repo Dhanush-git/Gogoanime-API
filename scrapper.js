@@ -83,12 +83,13 @@ async function anime(_anime_name) {
 
     anime_about = $('div.main_body  div:nth-child(2) > div.anime_info_body_bg > p:nth-child(5)').text()
 
-    ep_start = $('#episode_page > li > a').attr('ep_start')
-    ep_end = $('#episode_page > li > a').attr('ep_end')
+    //add the new code here
+    el = $('#episode_page')
 
-    if (ep_start == '0') {
-        ep_start = 1
-    }
+    ep_start = 1
+
+    ep_end = el.children().last().find('a').attr('ep_end')
+
 
     for (let i = ep_start; i <= ep_end; i++) {
         episode_array.push(`${_anime_name}-episode-${i}`)
@@ -142,6 +143,8 @@ async function getDownloadLink(episode_link) {
 
 
 }
+
+
 
 
 
