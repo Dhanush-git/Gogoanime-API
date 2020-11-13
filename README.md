@@ -20,7 +20,7 @@ this should install 🔻 all the dependencies required for running this project 
 🔢 step 3
 
 ```
-npm app.js
+npm start
 ```
 Now you should get a output similar to this
 
