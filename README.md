@@ -135,10 +135,14 @@ http://127.0.0.1:3000/search/:search-query
 <br />
 This is just a personal project created for study / demonstration purpose and to simplify my working life, it may or may not be a good fit for your project(s).
 
+<br />
+
 **❤️ Show your support**
 <br />
 Please ⭐ this repository if you like it or this project helped you!
 Feel free to open issues or submit pull-requests to help me improving my work.
+
+<br />
 
 **🤖 Author**
 <br />
