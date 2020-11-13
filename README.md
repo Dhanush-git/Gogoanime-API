@@ -111,6 +111,24 @@ http://127.0.0.1:3000/getEpisode/:episode_id
 ]
 ```
 
+**GET  | Search Anime 📽**
+```
+http://127.0.0.1:3000/search/:search-query
+```
+ >this will return all the anime related to the search
+```
+[
+    	  {
+        	"name": "anime name",
+        	"img_url": "url",
+        	"anime_id": "anime id"
+    	  }
+	  
+	  ...
+	  
+]	  
+```
+
 **💢 Troubleshootings**
 <br />
 This is just a personal project created for study / demonstration purpose and to simplify my working life, it may or may not be a good fit for your project(s).
