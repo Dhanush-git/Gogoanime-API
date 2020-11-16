@@ -45,7 +45,7 @@ and you should be greeted with
 
 **GET | Popular Anime 🍿**
 ```
-http://127.0.0.1:3000/Popular
+http://127.0.0.1:3000/Popular/:page
 ```
  >this will return all the popular anime
 ```
@@ -61,7 +61,7 @@ http://127.0.0.1:3000/Popular
 
 **GET | New Seasons 🆕**
 ```
-http://127.0.0.1:3000/NewSeasons
+http://127.0.0.1:3000/NewSeasons/:page
 ```
  >this will return all anime with new seasons available
 ```

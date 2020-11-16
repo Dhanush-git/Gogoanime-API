@@ -10,14 +10,14 @@ app.get('/', (req, res) => {
     res.send('👋 Hello world🌍, Welcome to 🦄 GogoAnime API 🧬 </br> Available routes : /Popular , /NewSeasons , /search/:query , /getAnime/:animeId , /getEpisode/:episodeId')
 })
 
-app.get('/Popular', async (req, res) => {
-    const result = await scapper.popular()
+app.get('/Popular/:page', async (req, res) => {
+    const result = await scapper.popular(req.params.page)
     res.header("Content-Type", 'application/json');
     res.send(JSON.stringify(result, null, 4))
 })
 
-app.get('/NewSeasons', async (req, res) => {
-    const result = await scapper.newSeason()
+app.get('/NewSeasons/:page', async (req, res) => {
+    const result = await scapper.newSeason(req.params.page)
     res.header("Content-Type", 'application/json');
     res.send(JSON.stringify(result, null, 4))
 })
