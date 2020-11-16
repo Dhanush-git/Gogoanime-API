@@ -7,7 +7,7 @@ const app = express()
 app.use(cors())
 
 app.get('/', (req, res) => {
-    res.send('👋 Hello world🌍, Welcome to 🦄 GogoAnime API 🧬')
+    res.send('👋 Hello world🌍, Welcome to 🦄 GogoAnime API 🧬 available routes: null ')
 })
 
 app.get('/Popular', async (req, res) => {
