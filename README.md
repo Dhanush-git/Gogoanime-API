@@ -43,6 +43,19 @@ and you should be greeted with
 
 *Running on localhost*
 
+**Available routes**
+	
+	/Popular/:page_no
+	
+	/NewSeasons/page_no
+	
+	/getAnime/anime_id
+	
+	/getEpisode/episode_id
+	
+	/search/search_query
+	
+
 **GET | Popular Anime 🍿**
 ```
 http://127.0.0.1:3000/Popular/:page
