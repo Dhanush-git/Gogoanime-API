@@ -91,7 +91,7 @@ http://127.0.0.1:3000/NewSeasons/:page
 ```
 http://127.0.0.1:3000/getAnime/:anime_id
 ```
- >this will return the anime **name** , **thumbnail image** ,**about  ?** and **episode_id** for all the episodes available for that anime
+ >this will return the anime **name ,thumbnail image ,about  ?** and **episode_id** for all the episodes available for that anime
 ```
 [
 	{
