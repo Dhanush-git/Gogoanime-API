@@ -17,7 +17,7 @@ async function newSeason(page) {
         name = $elements.find('p').find('a')
         img = $elements.find('div').find('a').find('img').attr('src')
         link = $elements.find('div').find('a').attr('href')
-        anime_name = { 'name': name.html(), 'img_url': img, 'anime_link': link.slice(10,) }
+        anime_name = { 'name': name.html(), 'img_url': img, 'anime_id': link.slice(10,) }
         anime_list.push(anime_name)
 
     })
