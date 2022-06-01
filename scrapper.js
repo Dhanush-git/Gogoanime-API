@@ -8,7 +8,7 @@ async function newSeason(page) {
     var anime_list = []
 
 
-    res = await axios.get(`https://gogoanime.so/new-season.html?page=${page}`)
+    res = await axios.get(`https://gogoanime.run/new-season.html?page=${page}`)
     const body = await res.data;
     const $ = cheerio.load(body)
 
