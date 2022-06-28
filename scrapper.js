@@ -2,13 +2,13 @@ const cheerio = require('cheerio');
 const axios = require('axios');
 
 
-
+const baseUrl = "https://gogoanime.run"
 
 async function newSeason(page) {
     var anime_list = []
 
 
-    res = await axios.get(`https://gogoanime.run/new-season.html?page=${page}`)
+    res = await axios.get(`${baseUrl}/new-season.html?page=${page}`)
     const body = await res.data;
     const $ = cheerio.load(body)
 
@@ -30,7 +30,7 @@ async function popular(page) {
     var anime_list = []
 
 
-    res = await axios.get(`https://gogoanime.so/popular.html?page=${page}`)
+    res = await axios.get(`${baseUrl}/popular.html?page=${page}`)
     const body = await res.data;
     const $ = cheerio.load(body)
 
@@ -51,7 +51,7 @@ async function search(query) {
     var anime_list = []
 
 
-    res = await axios.get(`https://gogoanime.so//search.html?keyword=${query}`)
+    res = await axios.get(`${baseUrl}/search.html?keyword=${query}`)
     const body = await res.data;
     const $ = cheerio.load(body)
 
@@ -73,7 +73,7 @@ async function anime(_anime_name) {
 
     episode_array = []
 
-    res = await axios.get(`https://gogoanime.so/category/${_anime_name}`)
+    res = await axios.get(`${baseUrl}/category/${_anime_name}`)
     const body = await res.data;
     const $ = cheerio.load(body)
 
@@ -107,7 +107,7 @@ async function anime(_anime_name) {
 
 async function watchAnime(episode_id) {
 
-    res = await axios.get(`https://gogoanime.so/${episode_id}`)
+    res = await axios.get(`${baseUrl}/${episode_id}`)
     const body = await res.data;
     $ = cheerio.load(body)
 
