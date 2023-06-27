@@ -1,11 +1,11 @@
 {
   "name": "gogoanime-scapper",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "simple gogoanime scapper",
   "main": "app.js",
   "scripts": {
     "start": "node .",
-    "dev":"nodemon ."
+    "dev": "nodemon ."
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,8 @@
     "cheerio": "^1.0.0-rc.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "nodemon": "^2.0.18"
+    "nodemon": "^2.0.18",
+    "puppeteer": "^20.7.3",
+    "user-agents": "^1.0.1423"
   }
 }

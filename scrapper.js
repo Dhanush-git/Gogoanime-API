@@ -1,7 +1,10 @@
 const cheerio = require('cheerio');
 const axios = require('axios');
+const puppeteer =  require('puppeteer');
+const userAgent = require('user-agents');
 
-
+// https://www3.gogoanimes.fi/
+// https://gogoanime.run
 const baseUrl = "https://gogoanime.run"
 
 async function newSeason(page) {
@@ -88,21 +91,16 @@ async function anime(_anime_name) {
 
     ep_start = 1
 
-    ep_end = el.children().last().find('a').attr('ep_end')
-
+    ep_end = el.children().last().find('a').text().split("-")[1]
 
     for (let i = ep_start; i <= ep_end; i++) {
         episode_array.push(`${_anime_name}-episode-${i}`)
 
     }
 
-
-
     anime_result = { 'name': anime_name, 'img_url': img_url, 'about': anime_about, 'episode_id': episode_array }
 
     return await (anime_result)
-
-
 }
 
 async function watchAnime(episode_id) {
@@ -116,38 +114,28 @@ async function watchAnime(episode_id) {
     ep = await getDownloadLink(episode_link)
 
     return await (ep)
-
-
-
 }
 
 async function getDownloadLink(episode_link) {
-
-    ep_array = []
-
-    res = await axios.get(episode_link)
-    const body = await res.data;
-    $ = cheerio.load(body)
-
-    $('div.mirror_link div').each((index, element) => {
-        ep_name = $(element).find('a').html()
-        ep_link = $(element).find('a').attr('href')
-
-        ep_dic = { 'quality': ep_name.replace('Download\n', 'watch').replace(/ +/g, ""), 'ep_link': ep_link }
-
-        ep_array.push(ep_dic)
+    const browser = await puppeteer.launch({ headless: true });
+    const page = await browser.newPage();
+    await page.setUserAgent(userAgent.random().toString())
+    await page.goto(episode_link, { waitUntil: 'networkidle0' });
+    const links = await page.evaluate(() => {
+    let ep_links = []
+    //fetch all links
+    const ep = document.querySelector(".mirror_link");
+    ep.querySelectorAll('a').forEach((link)=>{
+        ep_links.push({"name":link.innerText.split("D ")[1].replace(/[()]/g, ""),"link":link.href})
     })
 
+    return ep_links
+    });
 
-    return await (ep_array)
+    await browser.close();
 
-
+    return (links)
 }
-
-
-
-
-
 
 
 module.exports = {
